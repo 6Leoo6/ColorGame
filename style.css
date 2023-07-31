@@ -1,0 +1,227 @@
+:root {
+    --max-grid-width: 150px;
+    --cell-size: 25px;
+}
+
+body {
+    background-color: #322653;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 100px;
+    text-align: center;
+    height: 200px;
+    width: 540px;
+    margin: 0px;
+
+    background-image: linear-gradient(90deg, #9288F8, #FFD2D7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    font-family: 'Pacifico', cursive;
+}
+
+#header-div {
+    display: flex;
+    justify-content: center;
+}
+
+#game-settings-div {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#game-settings-background {
+    background-color: #FFD2D7;
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 10px 10px #181227;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.option-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 25px;
+    color: #322653;
+
+    width: 350px;
+}
+
+#size-option {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.select {
+    cursor: pointer;
+    width: 125px;
+    height: 35px;
+    background-color: #9288F8;
+    border-radius: 5px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.3s;
+}
+
+.select:hover {
+    transform: scale(1.1);
+}
+
+.select:active {
+    transform: scale(0.9);
+}
+
+#size-helper-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#example-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4px;
+    margin: 15px 0;
+    width: 100%;
+    height: var(--max-grid-width);
+}
+
+.grid-row {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+}
+
+.grid-cell {
+    aspect-ratio: 1;
+    width: var(--cell-size);
+    border-radius: 5px;
+    background-color: #9288F8;
+}
+
+#start-btn {
+    cursor: pointer;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: #f7bbc2;
+    transition: all 0.3s;
+    font-size: 30px;
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+#start-btn:hover {
+    transform: scale(1.1);
+    background-color: #f6a9b2;
+}
+
+#start-btn:active {
+    transform: scale(1);
+    background-color: #f894a0;
+}
+
+
+@media screen and (max-width: 550px) {
+    h1 {
+        font-size: 80px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    :root {
+        --max-grid-width: 100px;
+    }
+
+    h1 {
+        font-size: 60px;
+        height: 110px;
+    }
+    
+    #game-settings-div {
+        margin-top: 15px;
+    }
+
+    .option-div {
+        width: 250px;
+        font-size: 20px;
+    }
+
+    .select {
+        width: 100px;
+    }
+
+    #start-btn {
+        width: 100px;
+        height: 40px;
+        font-size: 25px;
+    }
+
+    #example-grid {
+        margin: 10px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    :root {
+        --max-grid-width: 100px;
+    }
+
+    h1 {
+        font-size: 50px;
+        height: 110px;
+    }
+    
+    #game-settings-div {
+        margin-top: 15px;
+    }
+
+    #game-settings-background {
+        padding: 5px 10px;
+    }
+
+    .option-div {
+        width: 200px;
+        font-size: 15px;
+        margin: 4px 0;
+    }
+
+    #start-btn {
+        width: 75px;
+        height: 30px;
+        font-size: 20px;
+        margin-top: 5px;
+        border-width: 2px;
+    }
+
+    .select {
+        width: 75px;
+        height: 20px;
+        border-width: 1px;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Color Game</title>
+</head>
+<body>
+    <div id="header-div">
+        <h1>Color Game</h1>
+    </div>
+
+    <div id="game-settings-div">
+        <div id="game-settings-background">
+            <div id="difficulty-option" class="option-div">
+                Difficulty
+                <div id="difficulty-select" class="select" onclick="changeDifficulty()">
+                    Normal
+                </div>
+            </div>
+            <div id="size-option" class="option-div">
+                <div id="size-helper-div">
+                    Grid-size
+                    <div id="size-select" class="select" onclick="changeSize()">
+                        2x2
+                    </div>
+                </div>
+                <div id="example-grid"></div>
+            </div>
+            <div id="mode-option" class="option-div">
+                Game mode
+                <div id="mode-select" class="select" onclick="changeGameMode()">
+                    Basic
+                </div>
+            </div>
+            <div id="start-btn" onclick="startGame()">Start</div>
+        </div>
+    </div>
+</body>
+</html>
