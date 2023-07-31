@@ -30,7 +30,7 @@ function changeSize() {
 }
 
 function startGame() {
-    let url = new URL("/game.html", location);
+    let url = new URL("game.html", location);
     url.searchParams.append("difficulty", currentDifficulty);
     url.searchParams.append("gridsize", currentSize+2);
     url.searchParams.append("mode", currentGameMode);
